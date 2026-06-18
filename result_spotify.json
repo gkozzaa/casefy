@@ -1,0 +1,88 @@
+{
+  "product": "Spotify",
+  "case": {
+    "case_title": "Retenção em Colapso: Spotify perde usuários no pós-trial",
+    "case_description": "O Spotify identificou que a conversão de usuários ao final do período trial gratuito de 3 meses caiu 22pp nos últimos dois trimestres, passando de 41% para 19% entre usuários adquiridos via campanhas de bundles com operadoras de telefonia. Internamente, dados de engajamento mostram que esses usuários escutam em média apenas 18 minutos por dia durante o trial, contra 47 minutos dos usuários que convertem organicamente. O churn nos primeiros 30 dias pós-conversão também subiu 34% nesse segmento específico, sugerindo que o problema vai além do preço. O CEO quer uma proposta de solução para o próximo ciclo de planejamento em 6 semanas.",
+    "opening_question": "Antes de mergulharmos em soluções, precisamos entender com quem estamos lidando: dado que esses usuários chegam via bundles com operadoras e têm engajamento tão baixo durante o trial (18 min/dia vs 47 dos orgânicos), como você pensaria em segmentar esse público para entender se estamos diante de um problema homogêneo ou se existem subgrupos com comportamentos e motivações distintas?"
+  },
+  "exchanges": [
+    {
+      "dim": "Product Sense",
+      "answer": "Eu segmentaria de alguma forma a identificar usuarios totalmente casuais que criam a conta ao caso, usuarios que pagavam por fora e agora pagam pelo bundle, e os realmente interessantes novos do bundle."
+    },
+    {
+      "dim": "Product Sense",
+      "answer": "?"
+    },
+    {
+      "dim": "Execution",
+      "answer": "o genuinamente novo, o casual acho que eh um onus do modelo de negocio do bundle. Mas o genuinamente novo vejo maneira de reter esse cara"
+    },
+    {
+      "dim": "Execution",
+      "answer": "para esses usuarios, aumentaria as seguintes estrategias de retencao: - auxilio em trazer playlists de outras plataformas e/ou gerar playslists novas baseados no seu gosto, faria estrategias de onboarding para mostrar tanto a parte de musicas mas tambem de podcasts, que é uma funcao legal do spotify que as vezes é deixada de lado e criaria uma gameficacao de tempo escutado nesse period de trial, para trazer um desconto no primeiro ano de assinatura. Priorizaria essa ultima primeiro, depois o auxilio de playlists e por ultimo um onboarding melhor. tradeoff aqui seria esse desconto inicial, mas como a retencao do spotify eu imagino que seja alta, se paga ao longo dos anos no LTV"
+    },
+    {
+      "dim": "Data & Metrics",
+      "answer": "a northstar eu seguiria na conversao de trial para pro, quebrando para o segmento. imagino ver melhoras nessa metrica. Metricas de suporte d que atingiram o objetivo, se as pessoas nao engajarem com a gamif nao adianta nada, continuaria comparando esse segmento com outros pra verificar o quano esta atrelado ao segmento ou ao negocio"
+    },
+    {
+      "dim": "Data & Metrics",
+      "answer": "esse numero de 34% eh geral do spotify ou apenas do nosso segmento foco?"
+    },
+    {
+      "dim": "AI Fluency",
+      "answer": "eu creio que, com a estrategia da gamificacao tendo sucesso, e o usuario ganhar 1 ano de desconto no pagamento, esse numero deve alterar, com o tradeoff do desconto mas aumentando esta retencao"
+    },
+    {
+      "dim": "AI Fluency",
+      "answer": "Mas ai eu acho que usuaria as estrategias ja aplicadas que o spotify deve ter para retencao de usuarios, entendendo seus gostos, sugerindo coisas boas que ele vai gostar, nao sei se precisamos de estrategias aqui para esse segmento. AGORA, pensando numa retencao geral para agregar valor a ferramenta e reter novos usuarios, evitando churn, eu verificaria ao longo dos meses o total de minutos escutados na plataforma, imagino que seja o maior indicador de churn, esse numero vai caindo caindo ate que o usuario canc"
+    },
+    {
+      "dim": "Communication",
+      "answer": "Colocaria comparacao de outros segmentos com este que estamos falando e o quanto de dinheiro eh deixado na mesa por nao estarmos aproveitando justamente um trabalho ja legal feito por outros times de parceria e finance. Traria o olhar deles para o lado positivo disso, ganhar e reter usuarios, TESTAR UMA NOVA ESTRATEGIA DE PRODUITO (gamificacao, que eh barato de fazer inclusive) e usar isso de aprendizado para segmentos maiores."
+    },
+    {
+      "dim": "Communication",
+      "answer": "Puxaria primeiro quem esta perto de mim, diretoria de produto e meus pares, explciaria o problema, nessecidades de roadmap com a ajuda da lideranca espero o buy-in deles. Depois iria para o time de dados, me ajudar a estruturar as analises e dashboards ncessarios para acomparnhar. Depois times mais distantes, marketing e parcerias seria apenas explicando para eles a estrategia com o grupo, o que pra eles eh positivo, afinal vamos trazer mais engajamento com bundles e com isso provalvemnete os clientes desses parceiros vao ter um motivo a mais para nao cancelar"
+    },
+    {
+      "dim": "Leadership",
+      "answer": "Gamificacao talvez nao esteja, mas as metricas de retorno possivelmente vao estar, retencao, conversao, etc. Encaixaria de alguma forma, mesmo mais distante, mas faria uma narrativa para mostrar a importancia de maneira mais broad"
+    },
+    {
+      "dim": "Leadership",
+      "answer": "pessoamnete falando,com a ajuda de LLM/vibecoding, testaria minha solucao para uma gama baixa de usuarios, buscando msotrar os resultados da gamificacao e como isso retorna em escala"
+    },
+    {
+      "dim": "Seniority Signal",
+      "answer": "Trabalharia em mitigar os maiores riscos antes, e lidaria com riscos menores, como sao usuario novos, criaria uma plataforma separada ou um formulario extremamente basico e ainda com bastante friccao apenas para validar o MVP. Se vc ouvir no min 1 hora de musica hj entrre nesse formulario  e colete seu premio, algo totalmente usando as ferramentas internas e ja validadas"
+    },
+    {
+      "dim": "Seniority Signal",
+      "answer": "Esse usuario entra na plataforma de forma nao-organica, ele ve num email da operadora, entra no spotify como quem nao quer nada e depois vai embora. quero aproveitar o gancho desse novo usuario pra trazer ele e mostrar o quao bom nos somos"
+    }
+  ],
+  "evaluation": {
+    "seniority": "Junior PM",
+    "overall_summary": "PM com intuição de produto razoável mas execução rasa e sem estrutura analítica sólida",
+    "scores": {
+      "Product Sense": 5,
+      "Execution": 4,
+      "Data & Metrics": 3,
+      "AI Fluency": 4,
+      "Communication": 5,
+      "Leadership": 4,
+      "Seniority Signal": 4
+    },
+    "feedback": {
+      "Product Sense": "A segmentação inicial dos usuários bundle é um instinto correto e relevante, mas o candidato não aprofunda os jobs-to-be-done de cada segmento nem conecta o baixo engajamento (18 min/dia) a hipóteses de causa raiz concretas. Ficou na superfície de uma análise que exigia muito mais rigor diagnóstico.",
+      "Execution": "As ideias de gamificação, migração de playlists e onboarding são válidas como direção, mas carecem completamente de critérios de priorização além de feeling. A justificativa do LTV para absorver o desconto é intuitiva, mas não há nenhum cálculo de payback, tamanho de impacto esperado ou definição de MVP testável real.",
+      "Data & Metrics": "Definir conversão trial→paid como North Star é adequado, mas o candidato não estabelece guardrails, não cita métricas de engajamento intermediárias (sessões, saves, follows) e a pergunta tardia sobre o churn de 34% ser geral ou segmentado revela que não processou os dados do briefing com atenção. Ausência total de framework de medição.",
+      "AI Fluency": "O candidato menciona uso de LLM e vibecoding para prototipar, o que é um sinal positivo de pragmatismo, mas não articula como IA poderia ser usada no produto em si (personalização acelerada, onboarding adaptativo, detecção de churn preditiva). A menção é superficial e não demonstra fluência real com aplicações de IA em produto.",
+      "Communication": "Tem clareza na narrativa de stakeholders e entende que precisa adaptar a mensagem por audiência, o que é positivo. Porém a estrutura é informal demais para um contexto de apresentação ao CEO em 6 semanas, sem mencionar formato, frequência de updates ou como gerenciaria resistência de parcerias.",
+      "Leadership": "Demonstra disposição para prototipar sozinho e buscar buy-in, o que é razoável para o nível. Mas não há visão de como construir um time em torno do problema, como lidar com trade-offs de roadmap com outros PMs ou como escalar o aprendizado para a organização além de uma narrativa genérica.",
+      "Seniority Signal": "O MVP de formulário com fricção alta para validar gamificação é criativamente frugal, mas operacionalmente ingênuo para uma plataforma como Spotify. Não há evidência de pensamento sistêmico, consideração de riscos contratuais com operadoras ou consciência de que a causa raiz pode ser de aquisição, não de produto."
+    }
+  }
+}

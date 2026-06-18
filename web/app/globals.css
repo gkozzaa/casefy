@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #0f0f14;
+  color: #ffffff;
+}
+
+/* Subtle ambient gradient used on dark sections. */
+.bg-grid {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 0
+    );
+  background-size: 32px 32px;
+}
+
+.glow-accent {
+  box-shadow: 0 0 80px -20px rgba(83, 74, 183, 0.55);
+}
+
+/* Thin custom scrollbar for the chat column. */
+.scroll-slim::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  background: #2a2a38;
+  border-radius: 999px;
+}
+.scroll-slim::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(ln -sf 4_interview_agent.py interview_agent.py)",
+      "Bash(./venv/bin/python -c \"from interview_agent import InterviewSession; print\\('OK: InterviewSession importado'\\)\")",
+      "Bash(./venv/bin/python -c ' *)",
+      "Bash(./venv/bin/python -c \"import ast; ast.parse\\(open\\('4_interview_agent.py'\\).read\\(\\)\\); ast.parse\\(open\\('5_api.py'\\).read\\(\\)\\); print\\('✅ 4_interview_agent.py e 5_api.py — sintaxe OK'\\)\")",
+      "Bash(./venv/bin/python -c \"from interview_agent import resolve_level, LEVELS; print\\('Níveis:', list\\(LEVELS.keys\\(\\)\\)\\); print\\('Aliases ok:', resolve_level\\('Pleno'\\), resolve_level\\('sr'\\), resolve_level\\('xyz'\\)\\)\")"
+    ]
+  }
+}
