@@ -187,7 +187,7 @@ function InterviewScreen() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <Logo className="h-6 w-6" />
-              <span className="font-semibold">Casefy</span>
+              <span className="font-semibold">PMCasefy</span>
             </Link>
             <div className="flex items-center gap-2 text-sm">
               {levelMeta && (
@@ -380,7 +380,7 @@ function LevelChooser({
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="h-6 w-6" />
-            <span className="font-semibold">Casefy</span>
+            <span className="font-semibold">PMCasefy</span>
           </Link>
           <div className="flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-sm">
             <span>{productEmoji ?? "🎯"}</span>

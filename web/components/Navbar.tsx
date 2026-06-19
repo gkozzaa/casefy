@@ -33,7 +33,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2">
           <Logo className="h-7 w-7" />
-          <span className="text-lg font-semibold tracking-tight">Casefy</span>
+          <span className="text-lg font-semibold tracking-tight">PMCasefy</span>
         </Link>
 
         <nav className="flex items-center gap-2 text-sm">

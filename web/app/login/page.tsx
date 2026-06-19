@@ -77,7 +77,7 @@ function LoginForm() {
       <div className="relative w-full max-w-sm">
         <Link href="/" className="mb-8 flex items-center justify-center gap-2">
           <Logo className="h-8 w-8" />
-          <span className="text-xl font-semibold">Casefy</span>
+          <span className="text-xl font-semibold">PMCasefy</span>
         </Link>
 
         <div className="rounded-2xl border border-border bg-surface p-7">

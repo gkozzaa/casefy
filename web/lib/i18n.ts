@@ -102,7 +102,7 @@ export const dict = {
       copy: "Copy link",
       copied: "Copied!",
       text: (p: string, s: string) =>
-        `I just ran a live ${p} PM case on Casefy and scored ${s}. Practice PM interviews with AI 👇`,
+        `I just ran a live ${p} PM case on PMCasefy and scored ${s}. Practice PM interviews with AI 👇`,
     },
     pricing: {
       successBanner: "🎉 You're Pro! Unlimited cases are unlocked.",
@@ -234,7 +234,7 @@ export const dict = {
       copy: "Copiar link",
       copied: "Copiado!",
       text: (p: string, s: string) =>
-        `Acabei de fazer um live case de PM do ${p} no Casefy e fui avaliado como ${s}. Treine entrevistas de PM com IA 👇`,
+        `Acabei de fazer um live case de PM do ${p} no PMCasefy e fui avaliado como ${s}. Treine entrevistas de PM com IA 👇`,
     },
     pricing: {
       successBanner: "🎉 Você é Pro! Cases ilimitados desbloqueados.",

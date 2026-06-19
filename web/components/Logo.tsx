@@ -1,4 +1,4 @@
-// Casefy mark — a stylized "C" / signal glyph in the accent purple.
+// PMCasefy mark — a stylized "C" / signal glyph in the accent purple.
 export function Logo({ className = "h-8 w-8" }: { className?: string }) {
   return (
     <svg

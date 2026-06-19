@@ -38,7 +38,7 @@ export async function POST(req: Request) {
                 currency: "usd",
                 unit_amount: UNLIMITED_PRICE_CENTS,
                 product_data: {
-                  name: "Casefy — Unlimited cases",
+                  name: "PMCasefy — Unlimited cases",
                   description: "Lifetime access to unlimited PM interview cases.",
                 },
               },

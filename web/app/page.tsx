@@ -111,7 +111,7 @@ export default function LandingPage() {
 
       <footer className="border-t border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-8 text-center text-sm text-muted">
-          © {new Date().getFullYear()} Casefy — {L.footer}
+          © {new Date().getFullYear()} PMCasefy — {L.footer}
         </div>
       </footer>
     </>
