@@ -23,29 +23,34 @@ export async function POST(req: Request) {
   // Use a pre-created Price if provided, otherwise build the line item inline.
   const priceId = process.env.STRIPE_PRICE_ID;
 
-  const session = await getStripe().checkout.sessions.create({
-    mode: "payment",
-    customer_email: user.email ?? undefined,
-    client_reference_id: user.id,
-    metadata: { user_id: user.id },
-    line_items: priceId
-      ? [{ price: priceId, quantity: 1 }]
-      : [
-          {
-            quantity: 1,
-            price_data: {
-              currency: "usd",
-              unit_amount: UNLIMITED_PRICE_CENTS,
-              product_data: {
-                name: "Casefy — Unlimited cases",
-                description: "Lifetime access to unlimited PM interview cases.",
+  try {
+    const session = await getStripe().checkout.sessions.create({
+      mode: "payment",
+      customer_email: user.email ?? undefined,
+      client_reference_id: user.id,
+      metadata: { user_id: user.id },
+      line_items: priceId
+        ? [{ price: priceId, quantity: 1 }]
+        : [
+            {
+              quantity: 1,
+              price_data: {
+                currency: "usd",
+                unit_amount: UNLIMITED_PRICE_CENTS,
+                product_data: {
+                  name: "Casefy — Unlimited cases",
+                  description: "Lifetime access to unlimited PM interview cases.",
+                },
               },
             },
-          },
-        ],
-    success_url: `${origin}/pricing?status=success`,
-    cancel_url: `${origin}/pricing?status=cancelled`,
-  });
+          ],
+      success_url: `${origin}/pricing?status=success`,
+      cancel_url: `${origin}/pricing?status=cancelled`,
+    });
 
-  return NextResponse.json({ url: session.url });
+    return NextResponse.json({ url: session.url });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Stripe error";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
