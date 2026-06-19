@@ -20,14 +20,14 @@ interface LangContextValue {
 const LangContext = createContext<LangContextValue | null>(null);
 
 function detectInitial(): Lang {
-  if (typeof window === "undefined") return "en";
+  if (typeof window === "undefined") return "pt";
   const saved = window.localStorage.getItem(STORAGE_KEY);
   if (saved === "en" || saved === "pt") return saved;
-  return navigator.language?.toLowerCase().startsWith("pt") ? "pt" : "en";
+  return navigator.language?.toLowerCase().startsWith("en") ? "en" : "pt";
 }
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+  const [lang, setLangState] = useState<Lang>("pt");
 
   // Resolve the real language on mount (avoids hydration mismatch).
   useEffect(() => {
