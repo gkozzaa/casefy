@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { useAuth } from "./useAuth";
 import { createClient } from "@/lib/supabase/client";
 import { Logo } from "./Logo";
@@ -12,6 +13,15 @@ export function Navbar() {
   const { user, loading } = useAuth();
   const { t } = useLang();
   const router = useRouter();
+  const [isPro, setIsPro] = useState(false);
+
+  useEffect(() => {
+    if (!user) return;
+    fetch("/api/entitlement")
+      .then((r) => r.ok ? r.json() : null)
+      .then((e) => e && setIsPro(e.isPro))
+      .catch(() => {});
+  }, [user]);
 
   async function signOut() {
     await createClient().auth.signOut();
@@ -39,6 +49,11 @@ export function Navbar() {
             <div className="h-9 w-24 animate-pulse rounded-lg bg-elevated" />
           ) : user ? (
             <>
+              {isPro && (
+                <span className="rounded-full bg-accent/20 px-2.5 py-1 text-xs font-semibold text-accent-soft ring-1 ring-accent/40">
+                  PRO
+                </span>
+              )}
               <span className="hidden px-2 text-muted sm:inline">
                 {user.email}
               </span>
