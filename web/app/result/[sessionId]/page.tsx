@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { api } from "@/lib/api";
 import { findProduct } from "@/lib/products";
@@ -21,9 +21,9 @@ interface Stored {
 export default function ResultPage({
   params,
 }: {
-  params: Promise<{ sessionId: string }>;
+  params: { sessionId: string };
 }) {
-  const { sessionId } = use(params);
+  const { sessionId } = params;
   const { t } = useLang();
   const [data, setData] = useState<Stored | null>(null);
   const [error, setError] = useState(false);
