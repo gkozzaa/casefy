@@ -23,7 +23,7 @@ function detectInitial(): Lang {
   if (typeof window === "undefined") return "pt";
   const saved = window.localStorage.getItem(STORAGE_KEY);
   if (saved === "en" || saved === "pt") return saved;
-  return navigator.language?.toLowerCase().startsWith("en") ? "en" : "pt";
+  return "pt";
 }
 
 export function LangProvider({ children }: { children: ReactNode }) {
