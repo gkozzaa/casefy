@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { stripe, UNLIMITED_PRICE_CENTS } from "@/lib/stripe";
+import { getStripe, UNLIMITED_PRICE_CENTS } from "@/lib/stripe";
 
 // Creates a Stripe Checkout session for the "unlimited cases" upgrade.
 export async function POST(req: Request) {
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
   // Use a pre-created Price if provided, otherwise build the line item inline.
   const priceId = process.env.STRIPE_PRICE_ID;
 
-  const session = await stripe.checkout.sessions.create({
+  const session = await getStripe().checkout.sessions.create({
     mode: "payment",
     customer_email: user.email ?? undefined,
     client_reference_id: user.id,

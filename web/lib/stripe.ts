@@ -1,11 +1,17 @@
-// Server-side Stripe client. Never import this into a client component.
 import Stripe from "stripe";
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  apiVersion: "2025-02-24.acacia",
-  typescript: true,
-});
+export const UNLIMITED_PRICE_CENTS = 1900;
 
-// Price of the "unlimited cases" upgrade, in cents. Used when no
-// STRIPE_PRICE_ID is configured and we create the line item inline.
-export const UNLIMITED_PRICE_CENTS = 1900; // $19.00
+// Lazy singleton — never instantiated at module load time so the build
+// succeeds even when STRIPE_SECRET_KEY is not yet configured.
+let _stripe: Stripe | null = null;
+
+export function getStripe(): Stripe {
+  if (!_stripe) {
+    _stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+      apiVersion: "2025-02-24.acacia",
+      typescript: true,
+    });
+  }
+  return _stripe;
+}

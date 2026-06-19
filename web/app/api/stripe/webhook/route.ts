@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 
 // Stripe webhook: flips the user to Pro on successful payment.
 // Uses the service-role key so it can update any profile server-side.
@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
   let event;
   try {
-    event = stripe.webhooks.constructEvent(body, signature, secret);
+    event = getStripe().webhooks.constructEvent(body, signature, secret);
   } catch (err) {
     const msg = err instanceof Error ? err.message : "invalid signature";
     return NextResponse.json({ error: msg }, { status: 400 });
